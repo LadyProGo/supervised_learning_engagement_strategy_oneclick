@@ -10,27 +10,22 @@
 - Выделить наиболее прибыльных клиентов в зоне риска.
 - Разработать рекомендации для удержания этих клиентов.
 
-Были протестированы 4 модели:
+Были протестированы 5 модели:
 
 - DecisionTreeClassifier
 - KNeighborsClassifier
 - LogisticRegression (с L1-регуляризацией)
 - SVC (с различными ядрами и параметрами C)
+- RandomForestClassifier
 
 Подбор параметров осуществлялся через RandomizedSearchCV с кросс-валидацией и метрикой ROC-AUC.
 
-Лучшая модель:
-
-Support Vector Classifier (SVC) с параметрами:
-
-- C = 10
-- kernel = 'rbf'
-- probability = True
+Лучшая модель: RandomForestClassifier
 
 Качество модели:
 
-- ROC-AUC на кросс-валидации: 0.901
-- ROC-AUC на тестовой выборке: 0.908
+- ROC-AUC на кросс-валидации: 0.908
+- ROC-AUC на тестовой выборке: 0.915
 
 Выводы:
 
